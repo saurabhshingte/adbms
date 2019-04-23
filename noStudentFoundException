@@ -7,9 +7,9 @@ BEGIN
 temp:=:num;
 select firstname, lastname into fname, lname from student157 where sid=temp;
 
-DBMS_OUTPUT.PUT_LINE(&#39; student name : &#39;|| fname || &#39; &#39; || lname );
+DBMS_OUTPUT.PUT_LINE(' student name : '|| fname || '' || lname );
 
 EXCEPTION
 When No_DATA_FOUND THEN
-DBMS_OUTPUT.PUT_LINE(&#39;No such student bro.&#39;);
+DBMS_OUTPUT.PUT_LINE('No such student');
 END;
