@@ -5,10 +5,10 @@ BEGIN
 a:= 10;
 
 if MOD(a,2) = 0 THEN
-dbms_output.put_line(&#39;Even&#39;);
+dbms_output.put_line('Even');
 
 else
-dbms_output.put_line(&#39;Odd&#39;);
+dbms_output.put_line('Odd'');
 END IF;
 
 END
