@@ -1,0 +1,8 @@
+create or replace function emp_sal
+return number
+is
+total number;
+begin
+select count(*) into total from emp where salary&gt;10000;
+return total;
+end;
