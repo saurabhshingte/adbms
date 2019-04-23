@@ -1,0 +1,12 @@
+create or replace function evenadd
+return number
+is
+result number :=0;
+begin
+for num in 1..200 loop
+IF mod(num,2)=0 then
+result := result+num;
+END IF;
+end loop;
+return result;
+end;
