@@ -1,0 +1,18 @@
+DECLARE
+a number;
+result number;
+i number;
+
+BEGIN
+a:= 5;
+result:= 1;
+
+for i in 1..a
+loop
+result:= result*i;
+
+end loop;
+
+dbms_output.put_line(result);
+
+END
