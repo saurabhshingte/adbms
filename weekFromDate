@@ -2,7 +2,7 @@ DECLARE
 weekDay varchar(20);
 
 BEGIN
-weekDay:= to_char(sysdate,&#39;day&#39;);
-dbms_output.put_line(&#39;Today is :&#39; || weekDay);
+weekDay:= to_char(sysdate,'day');
+dbms_output.put_line('Today is :' || weekDay);
 
 END
