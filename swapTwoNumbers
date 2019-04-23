@@ -1,0 +1,16 @@
+DECLARE
+a number;
+b number;
+temp number;
+
+BEGIN
+a:= :num;
+b:= :num1;
+dbms_output.put_line(&#39;a:&#39; || a || &#39; b:&#39; || b);
+
+temp:= a;
+a:= b;
+b:= temp;
+dbms_output.put_line(&#39;a:&#39; || a || &#39; b:&#39; || b);
+
+END
