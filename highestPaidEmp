@@ -1,0 +1,8 @@
+create or replace function emp_maxSal
+return number
+is
+total number;
+begin
+select emp_no into total from emp where salary=(select max(salary) from emp);
+return total;
+end;
