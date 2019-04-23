@@ -1,0 +1,22 @@
+DECLARE
+length number;
+area number;
+breadth number;
+zero_divide EXCEPTION;
+
+BEGIN
+area:=:area;
+breadth:=:breadth;
+
+IF breadth=0 then
+RAISE zero_divide;
+ELSE
+length:=area/breadth;
+DBMS_OUTPUT.PUT_LINE(' Length of rectangle : '|| length);
+END IF;
+
+EXCEPTION
+When zero_divide THEN
+DBMS_OUTPUT.PUT_LINE('Divide by zero error');
+
+END;
