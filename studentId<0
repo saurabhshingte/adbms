@@ -1,0 +1,20 @@
+DECLARE
+fname varchar(20);
+lname varchar(20);
+temp number;
+less_than_zero EXCEPTION;
+
+BEGIN
+temp:=:num;
+IF temp&lt;=0 then
+RAISE less_than_zero;
+ELSE
+select firstname, lastname into fname, lname from student157 where sid=temp;
+DBMS_OUTPUT.PUT_LINE(&#39; student name : &#39;|| fname || &#39; &#39; || lname );
+END IF;
+
+EXCEPTION
+
+When less_than_zero THEN
+DBMS_OUTPUT.PUT_LINE(&#39;Student ID must be greater than 0&#39;);
+END;
