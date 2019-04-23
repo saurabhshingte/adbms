@@ -1,0 +1,26 @@
+DECLARE
+totalmarks number;
+temp number;
+marks number;
+marks_not_found EXCEPTION;
+
+BEGIN
+temp:=:num;
+select marks into totalmarks from student100 where sid=temp;
+
+IF marks=0 then
+RAISE marks_not_found;
+ELSE
+select marks into totalmarks from student100 where sid=temp;
+totalmarks:=totalmarks*1.1;
+DBMS_OUTPUT.PUT_LINE(' Marks: '|| totalmarks);
+END IF;
+
+EXCEPTION
+When marks_not_found THEN
+
+DBMS_OUTPUT.PUT_LINE('Marks are missing.');
+
+WHEN no_data_found THEN
+DBMS_OUTPUT.PUT_LINE('No data found');
+END;
