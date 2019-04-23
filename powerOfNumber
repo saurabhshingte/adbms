@@ -7,6 +7,6 @@ BEGIN
 a:= :num;
 b:= :num1;
 result := power(a,b);
-dbms_output.put_line(&#39;Result is :&#39; || result);
+dbms_output.put_line('Result is :' || result);
 
 END
